@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-left:500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-size: cover;
+  background-color:#87CEFA;
+  height:500px;
+  width:500px;
+}
+body{
+  background-image: url("https://images.pexels.com/photos/16683304/pexels-photo-16683304.jpeg?auto=compress&cs=tinysrgb&w=600");
+}
+
+input[type="text"], textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  
+}
+
+button.btn {
+  background-color: 	#0000CD;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button.btn:hover {
+  background-color: #1E90FF;
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+ {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+</body>
+</html>
